@@ -1,0 +1,6 @@
+interface:
+  display_name: "Workspace Startup"
+  short_description: "Load global Workspace rules before projects."
+  default_prompt: "Use $workspace-startup before starting this Workspace project."
+policy:
+  allow_implicit_invocation: true
