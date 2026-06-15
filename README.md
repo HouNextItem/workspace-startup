@@ -4,6 +4,8 @@ Workspace Startup helps Codex find or initialize a persistent project Workspace 
 
 Repository: [HouNextItem/workspace-startup](https://github.com/HouNextItem/workspace-startup)
 
+This GitHub repository is the canonical source for updates to the skill.
+
 ## What it does
 
 - Finds an existing Workspace root
