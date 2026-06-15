@@ -9,15 +9,19 @@ Use this skill first for project work that should live inside a persistent Works
 
 ## Core Rule
 
-Do not assume a fixed Workspace path. Discover it from the user, an existing `Agents.md`, or the current project context. If no Workspace can be found, ask before creating one.
+Do not assume a fixed Workspace path for everyone. Discover it from the user, an existing `Agents.md`, or the current project context. If no Workspace can be found, ask before creating one.
 
 ## Workspace Discovery
 
+For this machine, reuse any Workspace root that has already been recorded in the local Workspace documents. Treat that recorded root as the default meaning of "Workspace" unless the user explicitly provides another path.
+
 1. If the user provides a Workspace path, use it.
-2. Else if this skill or the Workspace documents already establish a known Workspace root for this machine, reuse that exact root.
+2. Else if this skill or the local Workspace documents have already established a machine default, reuse that exact root.
 3. Else if a Workspace root has already been established in the conversation, Workspace documents, or project notes, reuse that exact root.
 4. Else look for `Agents.md` plus the global Workspace documents in the current folder or an obvious parent.
 5. Else ask the user for the Workspace root path.
+
+Do not let a dated temporary directory such as `C:\Users\33546\Documents\Codex\YYYY-MM-DD\...` override an already established Workspace root. Those directories are temporary launch artifacts, not the canonical Workspace.
 
 ## Initialization Flow
 
@@ -39,8 +43,9 @@ Do not reinterpret the current chat folder or the current project checkout as th
 
 ## Machine Workspace Note
 
-When this skill is used on the machine where the Workspace root has already been established, treat the locally recorded Workspace root as the default meaning of "Workspace" unless the user explicitly gives another path.
-After a Workspace is created or confirmed on this machine, record the path in the Workspace documents so future sessions can reuse it.
+On this machine, the established Workspace root should be recorded in the local Workspace documents before reuse.
+When this skill is used here, prefer that recorded root as the default meaning of "Workspace" unless the user explicitly gives another path.
+After a Workspace is created or confirmed on this machine, record the root in the Workspace documents so future sessions can reuse it.
 
 ## Required `Agents.md` Contract
 

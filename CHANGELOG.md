@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0
+
+- Tightened workspace discovery so a previously established local Workspace root remains the preferred default.
+- Clarified that dated temporary Codex launch directories are not canonical Workspace roots.
+- Removed machine-specific path disclosure from the public skill instructions while keeping the reusable local-document lookup behavior.
+
 ## 1.1.0
 
 - Added a machine-level workspace binding note without publishing the actual local path in the public repository.

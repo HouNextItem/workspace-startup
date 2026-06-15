@@ -6,12 +6,16 @@ Repository: [HouNextItem/workspace-startup](https://github.com/HouNextItem/works
 
 This GitHub repository is the canonical source for updates to the skill.
 
+Version: `1.2.0`
+
 ## What it does
 
 - Finds an existing Workspace root
 - Reads `Agents.md` and the global Workspace documents
 - Creates the standard Workspace files when needed
 - Recommends English filenames and `Project_###_ProjectName` folders
+- Prefers any already recorded local Workspace root before falling back to generic discovery
+- Treats dated Codex launch folders as temporary artifacts, not the canonical Workspace root
 
 ## Standard Workspace Files
 
