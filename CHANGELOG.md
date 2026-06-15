@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+- Removed the personal machine-specific Workspace path from the skill instructions.
+- Kept the discovery flow path-agnostic unless the user or existing Workspace notes provide a root.
+- Clarified that the skill should not hardcode a private Workspace location.
+
 ## 1.0.0
 
 - Generalized the skill into a reusable Workspace discovery and initialization flow.
