@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+- Added a machine-level workspace binding note without publishing the actual local path in the public repository.
+- Preserved the generic discovery flow for other users while giving this machine a recorded default meaning for "Workspace" in local notes.
+- Clarified that confirmed workspace roots should be reused instead of falling back to the current chat or checkout directory.
+
 ## 1.0.1
 
 - Removed the personal machine-specific Workspace path from the skill instructions.

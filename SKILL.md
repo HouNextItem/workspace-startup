@@ -14,9 +14,10 @@ Do not assume a fixed Workspace path. Discover it from the user, an existing `Ag
 ## Workspace Discovery
 
 1. If the user provides a Workspace path, use it.
-2. Else look for `Agents.md` plus the global Workspace documents in the current folder or an obvious parent.
-3. Else use the Workspace root documented in the user's existing Workspace notes, if one is already established.
-4. Else ask the user for the Workspace root path.
+2. Else if this skill or the Workspace documents already establish a known Workspace root for this machine, reuse that exact root.
+3. Else if a Workspace root has already been established in the conversation, Workspace documents, or project notes, reuse that exact root.
+4. Else look for `Agents.md` plus the global Workspace documents in the current folder or an obvious parent.
+5. Else ask the user for the Workspace root path.
 
 ## Initialization Flow
 
@@ -34,6 +35,12 @@ When the user asks to initialize a new Workspace, create these files in the Work
 Prefer English filenames in the shared Workspace. Prefer names without spaces. Use underscores or hyphens so PowerShell and CLI tools do not split paths unexpectedly.
 Prefer English directory names for the shared Workspace root and for all project folders.
 Do not hardcode a personal or machine-specific Workspace path into this skill.
+Do not reinterpret the current chat folder or the current project checkout as the Workspace root when a Workspace root has already been established.
+
+## Machine Workspace Note
+
+When this skill is used on the machine where the Workspace root has already been established, treat the locally recorded Workspace root as the default meaning of "Workspace" unless the user explicitly gives another path.
+After a Workspace is created or confirmed on this machine, record the path in the Workspace documents so future sessions can reuse it.
 
 ## Required `Agents.md` Contract
 
