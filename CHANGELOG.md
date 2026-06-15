@@ -1,9 +1,8 @@
 # Changelog
 
-## 2026-06-14
+## 1.0.0
 
-- Changed the skill from a machine-specific startup helper into a reusable Workspace discovery and initialization workflow.
-- Removed the hardcoded `E:\33546\project\Workspace` requirement from the skill instructions.
-- Added guidance for users who already have a Workspace and for users who need Codex to initialize one.
-- Kept `Agents.md` as the stable entry point for global rules.
-- Updated UI metadata to describe discovery and initialization behavior.
+- Generalized the skill into a reusable Workspace discovery and initialization flow.
+- Kept `Agents.md` as the stable entry point for shared Workspace rules.
+- Added explicit guidance for English-only filenames and `Project_###_ProjectName` folders.
+- Clarified the user-facing behavior for creating or locating a Workspace and project folder.
